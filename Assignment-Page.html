@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<title>HTML-Assignment</title>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+	function validateForm() {
+		var x = document.forms["User-Details"]["fname"].value;
+		var y = document.forms["User-Details"]["Text1"].value;
+		if(x == "" || y == "") {
+			alert("Name must be filled out");
+			return false;
+		}
+	}
+	</script>
+	<style type="text/css">
+	body.solid {
+		border: 1px solid black;
+	}
+	
+	.left_bracket {
+		color: #00F;
+	}
+	
+	.right_bracket {
+		color: #00F;
+	}
+	
+	.red_tag {
+		color: #F00;
+	}
+	
+	table.w3-table-all {
+		margin: 20px 0;
+	}
+	
+	.w3-table,
+	.w3-table-all {
+		border-collapse: collapse;
+		border: 1px red solid;
+		border-color: grey;
+		border-spacing: 0;
+		width: 50%;
+		display: table;
+	}
+	
+	a:visited {
+		color: black;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	
+	.A1 {
+		text-decoration: none;
+		color: black;
+	}
+	
+	tr:nth-child(even) {
+		background-color: #dddddd;
+	}
+	</style>
+</head>
+
+<body class="solid">
+	<div id="container">
+		<div class="header" style="display:inline;">
+			<a href="https://www.w3schools.com/" class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/W3Schools_logo.png" height="90" width="190" align="left"></a>
+		</div>
+		<br>
+		<div> <font size="10">&nbsp;THE WORLD'S LARGEST WEBDEVELOPER SITE</font> </div>
+	</div>
+	<br>
+	<hr>
+	<h1>
+	<a href="https://www.w3schools.com/html/default.asp">HTML</a> 
+	<a href="https://www.w3schools.com/css/default.asp">CSS</a> 
+	<a href="https://www.w3schools.com/js/default.asp">JAVASCRIPT</a>
+        <a href="https://www.w3schools.com/python/default.asp">PYTHON</a> 
+</h1>
+	<hr>
+	<section>
+		<h1>HTML Introduction</h1>
+		<p>Html is the standard markup language for creating Web pages.</p>
+		<ol>
+			<li><a href="#HTML" class="A1">What is HTML</a></li>
+			<li><a href="#HTMLElement" class="A1">What is an HTML element</a></li>
+			<li><a href="#WEB" class="A1">Web Browsers</a></li>
+		</ol>
+	</section>
+	<section>
+		<h2 id="HTML">What is HTML ?</h2>
+		<ul>
+			<li>HTML stands for Hyper Text Markup Language</li>
+			<li>HTML is the standard markup language for creating Web pages</li>
+			<li>HTML describes the structure of a Web page</li>
+			<li>HTML consists of a series of elements</li>
+			<li>HTML elements tell the browser how to display the content</li>
+			<li>HTML elements label pieces of content such as &quot;this is a heading&quot;, &quot;this is a paragraph&quot;, &quot;this is a link&quot;, etc.</li>
+		</ul>
+	</section>
+	<section>
+		<p>
+			<h2 id="HTMLElement">What is an HTML Element ?
+</h2>
+			<p>The HTML <strong>element</strong> is everything from the start tag to the end tag:</p>
+			<h3>
+<span class="left_bracket">&lt;</span><span class="red_tag">tagname</span><span class="right_bracket">&gt;</span>Content goes here...
+<span class="left_bracket">&lt;</span><span class="red_tag">/tagname</span><span class="right_bracket">&gt;</span></h3>
+			<p>The HTML element is everything from the start tag to the end tag:</p>
+			<h3>
+<span class="left_bracket">&lt;</span><span class="red_tag">h1</span><span class="right_bracket">&gt;</span>My First Heading
+<span class="left_bracket">&lt;</span><span class="red_tag">/h1</span><span class="right_bracket">&gt;</span></h3>
+			<h3>
+<span class="left_bracket">&lt;</span><span class="red_tag">p</span><span class="right_bracket">&gt;</span>My first paragraph
+<span class="left_bracket">&lt;</span><span class="red_tag">/p</span><span class="right_bracket">&gt;</span></h3>
+			<table width="200" class="w3-table-all">
+				<tr>
+					<th width="50" align="left">Start tag</th>
+					<th width="60" align="left">Element content</th>
+					<th width="50" align="left">End tag</th>
+				</tr>
+				<tr>
+					<td> &lt;h1&gt;</td>
+					<td>My First Heading</td>
+					<td>&lt;/h1&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;p&gt;</td>
+					<td>My first paragraph.</td>
+					<td>&lt;/p&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;br&gt;</td>
+					<td><em>none</em></td>
+					<td><em>none</em></td>
+				</tr>
+			</table>
+	</section>
+	<section>
+		<h2 id="WEB">Web Browsers</h2>
+		<p>The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.</p>
+		<p>A browser does not display the HTML tags, but uses them to determine how to display the document:</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://www.w3schools.com/html/img_chrome.png" align="center" alt="heading1_Image" width="455" height="262" /></p>
+	</section>
+	<section>
+		<h3>Submit a Review</h3>
+		<form name="User-Details" action="https://www.knoldus.com/connect/contact-us" method="get" onsubmit="return validateForm()">
+			<p>Name:
+				<input type="text" placeholder="name" id="fname" name="fname">
+				<input type="radio" id="male" name="gender" value="male" checked>
+				<label for="male">Male</label>
+				<input type="radio" id="female" name="gender" value="female">
+				<label for="female">Female</label>
+				<input type="radio" id="other" name="gender" value="other">
+				<label for="other">Other</label>
+			</p>
+			<p>
+				<label for="rate_it">rate it::</label>
+				<select name="option:" id="rate_options">
+					<option value="very bad">very bad</option>
+					<option value="bad">bad</option>
+					<option value="good">good</option>
+					<option value="very good" selected>very good</option>
+				</select>
+			</p>
+			<textarea name="Text1" rows="8" cols="30" placeholder="please add a review..."></textarea>
+			<p>
+				<input type="submit" value="Submit"> </p>
+		</form>
+	</section>
+</body>
+
+</html>
